@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import SocialBox from '../components/socialBox.astro';
+import LinkedInIcon from '../components/icons/LinkedInIcon.astro'
+import GitHubIcon from '../components/icons/GitHubIcon.astro';
+import EmailIcon from '../components/icons/EmailIcon.astro';
+import FlickerIcon from '../components/icons/FlickerIcon.astro';
+import LichessIcon from '../components/icons/LichessIcon.astro';
+import CodeIcon from '../components/icons/CodeIcon.astro';
+import Projects from '../components/Projects.astro'
+
+---
+
+<Layout title="Porfolio de Bruno.">
+	<main class="px-4">
+		<section class="w-full mx-auto lg:w-[740px] py-44">
+			<img 
+			class="rounded-full w-12 h-12 mb-4" 
+			src="/bruno-photo.jpg" 
+			alt="bruno photo"
+		/>
+			<h1 class = "black:text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6"
+				>Hola, soy Bruno <a 
+				href="https://www.linkedin.com/in/bruno-beletti-a986321a7" 
+				target="_blank" 
+				rel="noopener"
+				class="flex justify-center items-center bp-4">
+				<Badge>Disponible</Badge> 
+				</a>
+			</h1>
+		<h2 class="text-xl md:text-2xl text-wrap max-w-[700] opacity-80">X proyectos creados. Desarrollador Web. De Cordoba, Argentina.</h2>
+		<nav class="flex flex-wrap gap-4 mt-6" >
+			<SocialBox href="https://www.linkedin.com/in/bruno-beletti-a986321a7">
+				<LinkedInIcon class="md:size-6 size-4"/>
+				LinkedIn
+			</SocialBox>
+			<SocialBox href="https://github.com/bbeletti">
+				<GitHubIcon class="md:size-6 size-4"/>
+				GitHub
+			</SocialBox>
+			<SocialBox>
+				<EmailIcon class="md:size-6 size-4"/>
+				Belettibruno@gmail.com
+			</SocialBox>
+			<SocialBox href="https://lichess.org/@/Bruno-dt/">
+				<LichessIcon class="md:size-6 size-4"/>
+				Lichess
+			</SocialBox>
+			<SocialBox href="https://www.flickr.com/photos/155934374@N06/">
+				<FlickerIcon class="md:size-6 size-4"/>
+				Flicker
+			</SocialBox>
+
+		</nav>
+
+		<h2 class="text-2xl font-semibold pt-44 flex gap-x-3 items-center">
+			<CodeIcon class="size-7" />
+			Proyectos
+			
+		</h2>
+
+		<Projects/>
+		
+		</section>
+	</main>
+</Layout>
+
+<style>
+	
+</style>

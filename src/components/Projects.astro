@@ -1,0 +1,55 @@
+---
+import SocialBox from "./socialBox.astro";
+import HtmlIcon from "./icons/HtmlIcon.astro"
+import TailWindIcon from "./icons/TailWindIcon.astro"
+import HammerIcon from "./icons/HammerIcon.astro"
+
+const TAGS = {
+    InProcess: {
+        name: "En proceso",
+        class: "bg-cyan-700		",
+        icon: HammerIcon
+    },
+    HTML: {
+        name: "HTML",
+        class: "bg-orange-100",
+        icon: HtmlIcon
+    },
+    TailWind: {
+        name: "TailWind",
+        class: "bg-cyan-200",
+        icon: TailWindIcon
+    }
+
+}
+
+const PROJECTS = [
+    {
+    title: 'Comercio electronico',
+    description: 'Pagina web que permite la carga de precios/productos mediante un archivo .csv y un sistema de pedidos',
+    link: '#',
+    github: '#',
+    image: '/eccomerce.png',
+    tags: [TAGS.InProcess, TAGS.HTML, TAGS.TailWind]
+    }
+]
+--- 
+{
+    PROJECTS.map(({image, title, description, tags}) => (
+        <article class="py-2 border-line-xl">
+        <h2 class="text-xl">{title}</h2>    
+        <p class="text-lg py-2 text-pretty">{description}</p>
+        <ul class="flex flex-row pt-2 pb-4">
+            {tags.map((tag) =>(
+                <li class="pr-2 flex flex-row flex-wrap dark:text-black">
+                    <span class={`hover:bg-white bg-white/80 flex gap-x-2 rounded-full text-m ${tag.class} py-1 px-2 border border-white/10 items-center`}>
+                    <tag.icon class="size-5" />
+                    {tag.name}    
+                    </span>
+                </li>
+            ))}
+        </ul>
+        <img class="rounded-lg"src={image} alt={`captura de pantalla del proyecto ${image}`}>
+        </article>
+    ))
+}

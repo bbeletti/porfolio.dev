@@ -3,6 +3,7 @@ import SocialBox from "./socialBox.astro";
 import HtmlIcon from "./icons/HtmlIcon.astro"
 import TailWindIcon from "./icons/TailWindIcon.astro"
 import HammerIcon from "./icons/HammerIcon.astro"
+import NextJS from "./icons/NextJS.astro";
 
 const TAGS = {
     InProcess: {
@@ -19,6 +20,11 @@ const TAGS = {
         name: "TailWind",
         class: "bg-cyan-200",
         icon: TailWindIcon
+    },
+    NextJs:{
+        name: "NextJs",
+        class: "bg-black-200",
+        icon: NextJS
     }
 
 }
@@ -30,7 +36,7 @@ const PROJECTS = [
     link: '#',
     github: '#',
     image: '/eccomerce.png',
-    tags: [TAGS.InProcess, TAGS.HTML, TAGS.TailWind]
+    tags: [TAGS.InProcess, TAGS.NextJs, TAGS.HTML, TAGS.TailWind]
     }
 ]
 --- 

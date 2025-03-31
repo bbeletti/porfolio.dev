@@ -33,7 +33,7 @@ const PROJECTS = [
     {
     title: 'Comercio electronico',
     description: 'Pagina web que permite la carga de precios/productos mediante un archivo .csv y un sistema de pedidos',
-    link: '#',
+    link: 'https://tienda-de-electronica.vercel.app/',
     github: '#',
     image: '/eccomerce.png',
     tags: [TAGS.InProcess, TAGS.NextJs, TAGS.HTML, TAGS.TailWind]
@@ -41,7 +41,7 @@ const PROJECTS = [
 ]
 --- 
 {
-    PROJECTS.map(({image, title, description, tags}) => (
+    PROJECTS.map(({image, title, description, tags, link}) => (
         <article class="py-2 border-line-xl">
         <h2 class="text-xl">{title}</h2>    
         <p class="text-lg py-2 text-pretty">{description}</p>
@@ -55,7 +55,9 @@ const PROJECTS = [
                 </li>
             ))}
         </ul>
-        <img class="rounded-lg"src={image} alt={`captura de pantalla del proyecto ${image}`}>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+        <img class="rounded-lg" src={image} alt={`Captura de pantalla del proyecto ${image}`} />
+        </a>
         </article>
     ))
 }
